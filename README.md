@@ -14,3 +14,5 @@
 # Cart
 ## composer require bumbummen99/shoppingcart
 ## php artisan vendor:publish --provider="Gloudemans\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
+
+# npm install @popperjs/core --save
