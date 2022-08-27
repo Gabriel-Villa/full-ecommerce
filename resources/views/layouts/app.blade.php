@@ -40,6 +40,7 @@
     <div id="app">
         @include('partials.nav')
         <main>
+            @include('partials.header')
             @yield('content')
         </main>
     </div>

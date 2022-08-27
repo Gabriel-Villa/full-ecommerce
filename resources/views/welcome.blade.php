@@ -5,14 +5,6 @@
 @section('content')
 
 
-    <div id="bg-overlay-black" class="p-5 text-center bg-light mb-4" style=" height: 330px; 
-        background-image: url({{asset('/images/banner/04.jpg')}});
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    ">
-    </div>
-
 
     <div class="container marketing mt-4">
 
