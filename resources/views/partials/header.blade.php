@@ -7,11 +7,12 @@
     ">
     <nav aria-label="breadcrumb" style="display: flex; justify-content: center; margin-top: 190px !important;">
         {{-- @if (Route::current()->uri() != '/') --}}
-                    <ol class="breadcrumb">
-                        @for($i = 0; $i <= count(Request::segments()); $i++)
-                            <li class="breadcrumb-item"><a href="#">{{Str::upper(Request::segment($i))}}</a></li>
-                        @endfor
-                    </ol>
+        <ol class="breadcrumb">
+            @for ($i = 0; $i <= count(Request::segments()); $i++)
+                <li class="breadcrumb-item text-white"><a href="#"
+                        class="text-white">{{ Str::upper(Request::segment($i)) }}</a></li>
+            @endfor
+        </ol>
         {{-- @endif --}}
     </nav>
 </div>

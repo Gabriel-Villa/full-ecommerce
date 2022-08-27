@@ -46,7 +46,7 @@
                     here.</p>
             </div>
             <div class="col-md-5">
-                <img src="{{ asset('/images/products/1.jpg') }}" alt="product-1" width="500" height="500" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+                <img src="{{ asset('/images/products/1.jpg') }}" alt="product-1" width="500" height="500" class="rounded bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
             </div>
         </div>
 
@@ -60,7 +60,7 @@
                     this layout would work with some actual real-world content in place.</p>
             </div>
             <div class="col-md-5 order-md-1">
-                <img src="{{ asset('/images/products/2.jpg') }}" alt="product-2" width="500" height="500" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+                <img src="{{ asset('/images/products/2.jpg') }}" alt="product-2" width="500" height="500" class="rounded bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
             </div>
         </div>
 
@@ -74,7 +74,7 @@
                     some actual content. Your content.</p>
             </div>
             <div class="col-md-5">
-                <img src="{{ asset('/images/products/3.jpg') }}" alt="product-3" width="500" height="500" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
+                <img src="{{ asset('/images/products/3.jpg') }}" alt="product-3" width="500" height="500" class="rounded bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto">
             </div>
         </div>
 

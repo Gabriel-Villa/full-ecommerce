@@ -41,6 +41,7 @@
         @include('partials.nav')
         <main>
             @include('partials.header')
+            <x-alerta />
             @yield('content')
         </main>
     </div>

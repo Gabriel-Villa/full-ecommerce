@@ -37,4 +37,12 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function redirectTo(){
+        if (request()->has('previous')) {
+            $this->redirectTo = request()->get('previous');
+        }
+        return $this->redirectTo ?? '/';
+    }
+
 }
