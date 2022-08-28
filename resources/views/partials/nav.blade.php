@@ -1,8 +1,7 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <!-- Container wrapper -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background: #F4F4F4 !important;">
     <div class="container-fluid">
-      <!-- Toggle button -->
+
       <button
         class="navbar-toggler"
         type="button"
@@ -15,18 +14,17 @@
         <i class="fas fa-bars"></i>
       </button>
   
-      <!-- Collapsible wrapper -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- Navbar brand -->
+
         <a class="navbar-brand mt-2 mt-lg-0" href="{{ route('index') }}">
           <img
-            src="https://img2.freepng.es/20180408/uqe/kisspng-logo-e-commerce-electronic-business-ecommerce-5aca8121ed83b3.3986831415232207699729.jpg"
+            src="{{ asset('images/logo.png') }}"
             height="50"
             alt="logo"
             loading="lazy"
           />
         </a>
-        <!-- Left links -->
+
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link" href="{{ route('productos.index') }}">Productos</a>
@@ -35,18 +33,20 @@
             <a class="nav-link" href="{{ route('contact') }}">Contacto</a>
           </li>
         </ul>
-        <!-- Left links -->
+
       </div>
-      <!-- Collapsible wrapper -->
   
-      <!-- Right elements -->
       <div class="d-flex align-items-center">
-        <!-- Icon -->
-        <a class="text-reset me-3" href="#">
-          <i class="fas fa-shopping-cart"></i>
+        <a href="{{ route('carrito.index') }}" class="position-relative border-0" style="margin-right: 18px;">
+          <i class="fas fa-shopping-cart text-dark" style="font-size: 18px;"></i>
+          @if (Cart::count() > 0)
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 10px;">
+              {{ Cart::count() }}
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          @endif
         </a>
        
-        <!-- Avatar -->
         <div class="dropdown">
           <a
             class="dropdown-toggle d-flex align-items-center hidden-arrow"
@@ -56,23 +56,44 @@
             data-mdb-toggle="dropdown"
             aria-expanded="false"
           >
-          <i class="fa-solid fa-user"></i>
+          @guest
+            <i class="fa-solid fa-user"></i>
+          @else
+            <p style="border: 1px solid grey; border-radius: 100%; padding: 5px 13px; margin-top: 11px !important;">{{ substr(Auth::user()->name, 0, 1) }}</p>
+          @endguest
           </a>
           <ul
             class="dropdown-menu dropdown-menu-end"
             aria-labelledby="navbarDropdownMenuAvatar"
           >
-            <li>
-              <a class="dropdown-item" href="{{ route('register') }}">Register</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="{{ route('login') }}">Login</a>
-            </li>
+            @guest
+              <li>
+                <a class="dropdown-item" href="{{ route('register') }}">Registro</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="{{ route('login') }}">Login</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="{{ route('login-driver', ['github']) }}">Login con github <i class="fa-brands fa-github"></i></a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="{{ route('login-driver', ['google']) }}">Login con google <i class="fa-brands fa-google"></i></a>
+              </li>
+            @else
+              <li>
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    Logout
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
+              </li>
+            @endguest
+            
           </ul>
         </div>
+        
       </div>
-      <!-- Right elements -->
     </div>
-    <!-- Container wrapper -->
   </nav>
-  <!-- Navbar -->

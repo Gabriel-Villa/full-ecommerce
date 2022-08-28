@@ -15,7 +15,7 @@
                 <h2 class="text-center">Heading</h2>
                 <br>
                 <p>Some representative placeholder content for the three columns of text below the carousel</p>
-                <p class="text-center"><a class="btn btn-secondary" >View details »</a></p>
+                <p class="text-center"><a href="{{ route('productos.index') }}" class="btn btn-secondary" >View details »</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <img src="{{ asset('/images/products/2.jpg') }}" alt="product-2" width="140" height="140" class="mx-auto d-block rounded-circle">
@@ -24,7 +24,7 @@
                 <br>
                 <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second
                     column.</p>
-                <p class="text-center"><a class="btn btn-secondary" >View details »</a></p>
+                <p class="text-center"><a href="{{ route('productos.index') }}" class="btn btn-secondary" >View details »</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
                 <img src="{{ asset('/images/products/3.jpg') }}" alt="product-3" width="140" height="140" class="mx-auto d-block rounded-circle">
@@ -32,7 +32,7 @@
                 <h2 class="text-center">Heading</h2>
                 <br>
                 <p>And lastly this, the third column of representative placeholder content.</p>
-                <p class="text-center"><a class="btn btn-secondary" >View details »</a></p>
+                <p class="text-center"><a href="{{ route('productos.index') }}" class="btn btn-secondary" >View details »</a></p>
             </div><!-- /.col-lg-4 -->
         </div>
 

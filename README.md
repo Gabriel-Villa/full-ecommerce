@@ -16,3 +16,7 @@
 ## php artisan vendor:publish --provider="Gloudemans\Shoppingcart\ShoppingcartServiceProvider" --tag="config"
 
 # npm install @popperjs/core --save
+
+## Google login
+# https://console.cloud.google.com/apis/dashboard?pli=1
+# https://www.youtube.com/watch?v=BXXmboZRLYo

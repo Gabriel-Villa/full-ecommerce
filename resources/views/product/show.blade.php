@@ -51,12 +51,16 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col d-flex justify-content-end">
-                                    <div class="buttons d-flex flex-row mt-1 gap-3">
-                                        <button type="button" class="btn btn-success m-0 mx-2" style="height: 34px;">
-                                            Agregar
-                                        </button> 
-                                        <a href="#" class="btn btn-secondary m-0 w-25 mt-1" style="height: 34px;">Ver carrito</a>
+                                <div class="col d-flex justify-content-start px-1">
+                                    <div class="buttons d-flex">
+                                        <form action="{{ route('carrito.store') }}" method="post">
+                                            @csrf
+                                            <input type="hidden" name="product_id" value="{{ $product->product_id }}">
+                                            <button type="submit" class="btn btn-success m-0 mx-2" style="height: 34px;">
+                                                Agregar
+                                            </button>
+                                        </form>
+                                        <a href="{{ route('carrito.index') }}" class="btn btn-secondary m-0" style="height: 34px;">Ver Carrito</a>
                                     </div>
                                 </div>
 
