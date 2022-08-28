@@ -85,7 +85,7 @@
                     </tbody>
                 </table>
                 <div class="w-100"></div>
-                <a href="/checkout" class="btn btn-success w-25">Pagar</a>
+                <a href="{{ route('orden.create') }}" class="btn btn-success w-25">Pagar</a>
             </div>
         </div>
     </section>
