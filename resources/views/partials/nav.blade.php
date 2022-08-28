@@ -71,8 +71,8 @@
                                     href="{{ route('productos.index') }}"></a></span></li>
                     @endforelse
                     @if (Cart::count() > 0)
-                        <li onclick="window.location='{{ route('carrito.index') }}'">
-                            <a href="{{ route('carrito.index') }}" class="btn dropdown-item">Ver carrito</a>
+                        <li onclick="window.location='{{ route('carrito.index') }}'" class="mt-1">
+                            <a href="{{ route('carrito.index') }}" class="btn dropdown-item fw-bold text-center">Ver carrito</a>
                         </li>
                     @endif
                 </ul>

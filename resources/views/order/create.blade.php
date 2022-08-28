@@ -91,7 +91,7 @@
 
                         <hr class="my-4">
 
-                        <button class="w-100 btn btn-primary btn-lg" type="submit">Ir a pagar</button>
+                        <button class="w-100 btn btn-primary btn-lg" type="submit">Continuar</button>
 
                     </form>
                 </div>
